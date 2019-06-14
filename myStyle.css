@@ -1,0 +1,74 @@
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+
+body {
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+	min-height: 100%;
+}
+
+.container {	
+	overflow-x: hidden;
+}
+
+.cloud {
+	background: url(./cloud.png) 0 0 no-repeat;
+	height: 100px;
+    background-size: contain;
+	animation: cloud;
+	animation-duration: 20s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;		
+}
+
+
+.cloud1 {
+	background-position: 200px;	
+}
+	
+@keyframes cloud{
+	from {
+		transform: translateX(-400px);
+	}
+	to {
+		transform: translateX(1350px);
+	}
+}
+
+.cat {
+	background: url(./catWalk.png) 0 0 no-repeat;
+	height: 201px;     
+	animation: catWalk 1.5s steps(11) infinite;
+	
+	position: fixed;
+    width: 390px;
+    bottom: 60px;
+    right: 0px;
+    scale: .5 .5;
+}
+
+@keyframes catWalk {
+	from {
+		    background-position-y: 0px;
+	}
+	to {
+		    background-position-y: -2200px;
+	}
+	
+}
+
+
+
+.grass{
+	position:fixed;
+	bottom:0;
+	background: url(./grass.png) 0 0 no-repeat;
+	height: 250px;    
+    background-size: cover;
+	width: 100%;
+	
+}
